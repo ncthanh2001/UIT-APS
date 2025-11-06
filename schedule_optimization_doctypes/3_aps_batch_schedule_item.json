@@ -1,0 +1,93 @@
+{
+  "creation": "2025-11-06 10:00:00",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "job_card",
+    "item_code",
+    "sales_order",
+    "qty",
+    "sequence_in_batch",
+    "operation",
+    "workstation",
+    "estimated_start_datetime",
+    "estimated_end_datetime",
+    "duration_mins",
+    "similarity_to_previous"
+  ],
+  "fields": [
+    {
+      "fieldname": "job_card",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Job Card",
+      "options": "APS Job Card",
+      "reqd": 1
+    },
+    {
+      "fieldname": "item_code",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Item Code",
+      "options": "APS Item"
+    },
+    {
+      "fieldname": "sales_order",
+      "fieldtype": "Link",
+      "label": "Sales Order",
+      "options": "APS Sales Order"
+    },
+    {
+      "fieldname": "qty",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Qty"
+    },
+    {
+      "fieldname": "sequence_in_batch",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Sequence"
+    },
+    {
+      "fieldname": "operation",
+      "fieldtype": "Data",
+      "label": "Operation"
+    },
+    {
+      "fieldname": "workstation",
+      "fieldtype": "Link",
+      "label": "Workstation",
+      "options": "APS Workstation"
+    },
+    {
+      "fieldname": "estimated_start_datetime",
+      "fieldtype": "Datetime",
+      "label": "Estimated Start"
+    },
+    {
+      "fieldname": "estimated_end_datetime",
+      "fieldtype": "Datetime",
+      "label": "Estimated End"
+    },
+    {
+      "fieldname": "duration_mins",
+      "fieldtype": "Float",
+      "label": "Duration (Mins)"
+    },
+    {
+      "fieldname": "similarity_to_previous",
+      "fieldtype": "Percent",
+      "label": "Similarity to Previous"
+    }
+  ],
+  "istable": 1,
+  "modified": "2025-11-06 10:00:00",
+  "modified_by": "Administrator",
+  "module": "Dbiz Aps",
+  "name": "APS Batch Schedule Item",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

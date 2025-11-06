@@ -1,0 +1,215 @@
+{
+  "actions": [],
+  "creation": "2025-11-06 10:00:00",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "planning_result",
+    "run_datetime",
+    "run_by",
+    "input_parameters_section",
+    "input_parameters",
+    "algorithm_execution_section",
+    "algorithm_used",
+    "phases_executed",
+    "performance_section",
+    "total_runtime_seconds",
+    "phase_runtimes",
+    "column_break_11",
+    "memory_usage_mb",
+    "cpu_usage_percent",
+    "results_section",
+    "optimization_status",
+    "optimization_score",
+    "column_break_16",
+    "iterations_completed",
+    "convergence_iteration",
+    "errors_and_warnings_section",
+    "errors",
+    "warnings",
+    "ml_execution_section",
+    "ml_models_used",
+    "ml_predictions_count",
+    "column_break_24",
+    "ml_average_confidence",
+    "detailed_log"
+  ],
+  "fields": [
+    {
+      "fieldname": "planning_result",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Planning Result",
+      "options": "APS Production Planning Result",
+      "reqd": 1
+    },
+    {
+      "default": "Now",
+      "fieldname": "run_datetime",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Run DateTime"
+    },
+    {
+      "default": "user",
+      "fieldname": "run_by",
+      "fieldtype": "Link",
+      "label": "Run By",
+      "options": "User"
+    },
+    {
+      "collapsible": 1,
+      "fieldname": "input_parameters_section",
+      "fieldtype": "Section Break",
+      "label": "Input Parameters"
+    },
+    {
+      "fieldname": "input_parameters",
+      "fieldtype": "Long Text",
+      "label": "Input Parameters (JSON)"
+    },
+    {
+      "fieldname": "algorithm_execution_section",
+      "fieldtype": "Section Break",
+      "label": "Algorithm Execution"
+    },
+    {
+      "fieldname": "algorithm_used",
+      "fieldtype": "Data",
+      "label": "Algorithm Used"
+    },
+    {
+      "fieldname": "phases_executed",
+      "fieldtype": "Long Text",
+      "label": "Phases Executed (JSON)"
+    },
+    {
+      "fieldname": "performance_section",
+      "fieldtype": "Section Break",
+      "label": "Performance"
+    },
+    {
+      "fieldname": "total_runtime_seconds",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Runtime (Seconds)"
+    },
+    {
+      "fieldname": "phase_runtimes",
+      "fieldtype": "Long Text",
+      "label": "Phase Runtimes (JSON)"
+    },
+    {
+      "fieldname": "column_break_11",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "memory_usage_mb",
+      "fieldtype": "Float",
+      "label": "Memory Usage (MB)"
+    },
+    {
+      "fieldname": "cpu_usage_percent",
+      "fieldtype": "Float",
+      "label": "CPU Usage (%)"
+    },
+    {
+      "fieldname": "results_section",
+      "fieldtype": "Section Break",
+      "label": "Results"
+    },
+    {
+      "fieldname": "optimization_status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Success\nPartial Success\nFailed\nTimeout"
+    },
+    {
+      "fieldname": "optimization_score",
+      "fieldtype": "Float",
+      "label": "Optimization Score"
+    },
+    {
+      "fieldname": "column_break_16",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "iterations_completed",
+      "fieldtype": "Int",
+      "label": "Iterations Completed"
+    },
+    {
+      "fieldname": "convergence_iteration",
+      "fieldtype": "Int",
+      "label": "Convergence Iteration"
+    },
+    {
+      "collapsible": 1,
+      "fieldname": "errors_and_warnings_section",
+      "fieldtype": "Section Break",
+      "label": "Errors & Warnings"
+    },
+    {
+      "fieldname": "errors",
+      "fieldtype": "Long Text",
+      "label": "Errors (JSON)"
+    },
+    {
+      "fieldname": "warnings",
+      "fieldtype": "Long Text",
+      "label": "Warnings (JSON)"
+    },
+    {
+      "collapsible": 1,
+      "fieldname": "ml_execution_section",
+      "fieldtype": "Section Break",
+      "label": "ML Execution"
+    },
+    {
+      "fieldname": "ml_models_used",
+      "fieldtype": "Long Text",
+      "label": "ML Models Used (JSON)"
+    },
+    {
+      "fieldname": "ml_predictions_count",
+      "fieldtype": "Int",
+      "label": "ML Predictions Count"
+    },
+    {
+      "fieldname": "column_break_24",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "ml_average_confidence",
+      "fieldtype": "Percent",
+      "label": "ML Average Confidence"
+    },
+    {
+      "fieldname": "detailed_log",
+      "fieldtype": "Text Editor",
+      "label": "Detailed Log"
+    }
+  ],
+  "links": [],
+  "modified": "2025-11-06 10:00:00",
+  "modified_by": "Administrator",
+  "module": "Dbiz Aps",
+  "name": "APS Optimization Run Log",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "read": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Manufacturing Manager"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

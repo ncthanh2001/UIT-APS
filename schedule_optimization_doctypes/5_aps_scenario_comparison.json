@@ -1,0 +1,139 @@
+{
+  "actions": [],
+  "autoname": "format:SCN-CMP-{planning_date}-{####}",
+  "creation": "2025-11-06 10:00:00",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "comparison_date",
+    "base_planning_result",
+    "total_scenarios",
+    "column_break_3",
+    "recommended_scenario",
+    "primary_objective",
+    "objective_weights",
+    "summary_section",
+    "best_makespan_scenario",
+    "best_cost_scenario",
+    "column_break_9",
+    "best_utilization_scenario",
+    "best_balanced_scenario",
+    "scenarios_section",
+    "scenarios"
+  ],
+  "fields": [
+    {
+      "default": "Today",
+      "fieldname": "comparison_date",
+      "fieldtype": "Date",
+      "label": "Comparison Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "base_planning_result",
+      "fieldtype": "Link",
+      "label": "Base Planning Result",
+      "options": "APS Production Planning Result"
+    },
+    {
+      "fieldname": "total_scenarios",
+      "fieldtype": "Int",
+      "label": "Total Scenarios",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "recommended_scenario",
+      "fieldtype": "Link",
+      "label": "Recommended Scenario",
+      "options": "APS Production Planning Result"
+    },
+    {
+      "fieldname": "primary_objective",
+      "fieldtype": "Select",
+      "label": "Primary Objective",
+      "options": "Makespan\nCost\nUtilization\nOn-time Delivery"
+    },
+    {
+      "fieldname": "objective_weights",
+      "fieldtype": "Long Text",
+      "label": "Objective Weights (JSON)"
+    },
+    {
+      "fieldname": "summary_section",
+      "fieldtype": "Section Break",
+      "label": "Best Scenarios"
+    },
+    {
+      "fieldname": "best_makespan_scenario",
+      "fieldtype": "Link",
+      "label": "Best Makespan",
+      "options": "APS Production Planning Result"
+    },
+    {
+      "fieldname": "best_cost_scenario",
+      "fieldtype": "Link",
+      "label": "Best Cost",
+      "options": "APS Production Planning Result"
+    },
+    {
+      "fieldname": "column_break_9",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "best_utilization_scenario",
+      "fieldtype": "Link",
+      "label": "Best Utilization",
+      "options": "APS Production Planning Result"
+    },
+    {
+      "fieldname": "best_balanced_scenario",
+      "fieldtype": "Link",
+      "label": "Best Balanced",
+      "options": "APS Production Planning Result"
+    },
+    {
+      "fieldname": "scenarios_section",
+      "fieldtype": "Section Break",
+      "label": "Scenarios"
+    },
+    {
+      "fieldname": "scenarios",
+      "fieldtype": "Table",
+      "label": "Scenarios",
+      "options": "APS Scenario Comparison Detail"
+    }
+  ],
+  "links": [],
+  "modified": "2025-11-06 10:00:00",
+  "modified_by": "Administrator",
+  "module": "Dbiz Aps",
+  "name": "APS Scenario Comparison",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Manufacturing Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Manufacturing User"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

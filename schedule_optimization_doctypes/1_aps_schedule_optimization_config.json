@@ -1,0 +1,298 @@
+{
+ "actions": [],
+ "creation": "2025-11-06 10:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_settings_section",
+  "default_ai_algorithm",
+  "default_optimization_objective",
+  "column_break_3",
+  "default_parallel_mode",
+  "max_parallel_scenarios",
+  "resource_settings_section",
+  "default_max_utilization",
+  "allow_overtime",
+  "column_break_8",
+  "overtime_cost_multiplier",
+  "batching_settings_section",
+  "enable_batching_by_default",
+  "default_batching_strategy",
+  "column_break_12",
+  "min_batch_size",
+  "max_batch_size",
+  "setup_time_reduction_target",
+  "risk_settings_section",
+  "default_risk_tolerance",
+  "ml_settings_section",
+  "enable_ml_predictions",
+  "ml_confidence_threshold",
+  "column_break_19",
+  "predict_bottlenecks",
+  "predict_risks",
+  "performance_settings_section",
+  "optimization_timeout_seconds",
+  "max_optimization_horizon_days",
+  "genetic_algorithm_section",
+  "ga_population_size",
+  "ga_generations",
+  "column_break_26",
+  "ga_crossover_rate",
+  "ga_mutation_rate",
+  "constraint_programming_section",
+  "cp_solver",
+  "cp_time_limit_seconds"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Default Settings"
+  },
+  {
+   "default": "Hybrid",
+   "fieldname": "default_ai_algorithm",
+   "fieldtype": "Select",
+   "label": "Default AI Algorithm",
+   "options": "Hybrid\nGenetic Algorithm\nConstraint Programming\nHeuristic\nML Enhanced"
+  },
+  {
+   "default": "Minimize Makespan",
+   "fieldname": "default_optimization_objective",
+   "fieldtype": "Select",
+   "label": "Default Optimization Objective",
+   "options": "Minimize Makespan\nMinimize Cost\nMaximize Utilization\nMinimize Tardiness\nBalance Workload\nMulti-Objective"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Auto",
+   "fieldname": "default_parallel_mode",
+   "fieldtype": "Select",
+   "label": "Default Parallel Processing Mode",
+   "options": "Auto\nForce Parallel\nDisable Parallel"
+  },
+  {
+   "default": "4",
+   "fieldname": "max_parallel_scenarios",
+   "fieldtype": "Int",
+   "label": "Max Parallel Scenarios"
+  },
+  {
+   "fieldname": "resource_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Resource Settings"
+  },
+  {
+   "default": "85",
+   "fieldname": "default_max_utilization",
+   "fieldtype": "Percent",
+   "label": "Default Max Utilization"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_overtime",
+   "fieldtype": "Check",
+   "label": "Allow Overtime"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1.5",
+   "depends_on": "eval:doc.allow_overtime==1",
+   "fieldname": "overtime_cost_multiplier",
+   "fieldtype": "Float",
+   "label": "Overtime Cost Multiplier"
+  },
+  {
+   "fieldname": "batching_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Batching Settings"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_batching_by_default",
+   "fieldtype": "Check",
+   "label": "Enable Batching By Default"
+  },
+  {
+   "default": "Similarity-based",
+   "depends_on": "eval:doc.enable_batching_by_default==1",
+   "fieldname": "default_batching_strategy",
+   "fieldtype": "Select",
+   "label": "Default Batching Strategy",
+   "options": "Family-based\nSize-based\nTime-window\nSimilarity-based"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "3",
+   "depends_on": "eval:doc.enable_batching_by_default==1",
+   "fieldname": "min_batch_size",
+   "fieldtype": "Int",
+   "label": "Min Batch Size"
+  },
+  {
+   "default": "20",
+   "depends_on": "eval:doc.enable_batching_by_default==1",
+   "fieldname": "max_batch_size",
+   "fieldtype": "Int",
+   "label": "Max Batch Size"
+  },
+  {
+   "default": "30",
+   "depends_on": "eval:doc.enable_batching_by_default==1",
+   "fieldname": "setup_time_reduction_target",
+   "fieldtype": "Percent",
+   "label": "Setup Time Reduction Target"
+  },
+  {
+   "fieldname": "risk_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Settings"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "default_risk_tolerance",
+   "fieldtype": "Select",
+   "label": "Default Risk Tolerance",
+   "options": "Low\nMedium\nHigh"
+  },
+  {
+   "fieldname": "ml_settings_section",
+   "fieldtype": "Section Break",
+   "label": "ML Settings"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_ml_predictions",
+   "fieldtype": "Check",
+   "label": "Enable ML Predictions"
+  },
+  {
+   "default": "70",
+   "depends_on": "eval:doc.enable_ml_predictions==1",
+   "fieldname": "ml_confidence_threshold",
+   "fieldtype": "Percent",
+   "label": "ML Confidence Threshold"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.enable_ml_predictions==1",
+   "fieldname": "predict_bottlenecks",
+   "fieldtype": "Check",
+   "label": "Predict Bottlenecks"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.enable_ml_predictions==1",
+   "fieldname": "predict_risks",
+   "fieldtype": "Check",
+   "label": "Predict Risks"
+  },
+  {
+   "fieldname": "performance_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Settings"
+  },
+  {
+   "default": "300",
+   "fieldname": "optimization_timeout_seconds",
+   "fieldtype": "Int",
+   "label": "Optimization Timeout (Seconds)"
+  },
+  {
+   "default": "90",
+   "fieldname": "max_optimization_horizon_days",
+   "fieldtype": "Int",
+   "label": "Max Optimization Horizon (Days)"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "genetic_algorithm_section",
+   "fieldtype": "Section Break",
+   "label": "Genetic Algorithm Parameters"
+  },
+  {
+   "default": "100",
+   "fieldname": "ga_population_size",
+   "fieldtype": "Int",
+   "label": "GA Population Size"
+  },
+  {
+   "default": "500",
+   "fieldname": "ga_generations",
+   "fieldtype": "Int",
+   "label": "GA Generations"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "80",
+   "fieldname": "ga_crossover_rate",
+   "fieldtype": "Percent",
+   "label": "GA Crossover Rate"
+  },
+  {
+   "default": "5",
+   "fieldname": "ga_mutation_rate",
+   "fieldtype": "Percent",
+   "label": "GA Mutation Rate"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "constraint_programming_section",
+   "fieldtype": "Section Break",
+   "label": "Constraint Programming Parameters"
+  },
+  {
+   "default": "Google OR-Tools",
+   "fieldname": "cp_solver",
+   "fieldtype": "Select",
+   "label": "CP Solver",
+   "options": "Google OR-Tools\nCPLEX\nGurobi"
+  },
+  {
+   "default": "60",
+   "fieldname": "cp_time_limit_seconds",
+   "fieldtype": "Int",
+   "label": "CP Time Limit (Seconds)"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-11-06 10:00:00",
+ "modified_by": "Administrator",
+ "module": "Dbiz Aps",
+ "name": "APS Schedule Optimization Config",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Manufacturing Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

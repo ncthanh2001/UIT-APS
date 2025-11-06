@@ -1,0 +1,215 @@
+{
+  "actions": [],
+  "creation": "2025-11-06 10:00:00",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "alert_date",
+    "planning_result",
+    "alert_type",
+    "severity",
+    "entity_section",
+    "entity_type",
+    "entity_id",
+    "prediction_details_section",
+    "predicted_date",
+    "probability",
+    "column_break_9",
+    "confidence_level",
+    "ml_model_used",
+    "impact_section",
+    "predicted_impact",
+    "estimated_cost_impact",
+    "affected_jobs",
+    "mitigation_section",
+    "suggested_actions",
+    "mitigation_cost",
+    "status_section",
+    "status",
+    "acknowledged_by",
+    "column_break_19",
+    "acknowledged_date",
+    "resolution_notes",
+    "actual_outcome"
+  ],
+  "fields": [
+    {
+      "default": "Today",
+      "fieldname": "alert_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Alert Date"
+    },
+    {
+      "fieldname": "planning_result",
+      "fieldtype": "Link",
+      "label": "Planning Result",
+      "options": "APS Production Planning Result"
+    },
+    {
+      "fieldname": "alert_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Alert Type",
+      "reqd": 1,
+      "options": "Bottleneck\nDelay Risk\nMaterial Shortage\nQuality Risk\nResource Breakdown"
+    },
+    {
+      "fieldname": "severity",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Severity",
+      "reqd": 1,
+      "options": "Critical\nHigh\nMedium\nLow"
+    },
+    {
+      "fieldname": "entity_section",
+      "fieldtype": "Section Break",
+      "label": "Entity Affected"
+    },
+    {
+      "fieldname": "entity_type",
+      "fieldtype": "Select",
+      "label": "Entity Type",
+      "options": "Workstation\nJob Card\nItem\nSales Order"
+    },
+    {
+      "fieldname": "entity_id",
+      "fieldtype": "Dynamic Link",
+      "label": "Entity ID",
+      "options": "entity_type"
+    },
+    {
+      "fieldname": "prediction_details_section",
+      "fieldtype": "Section Break",
+      "label": "Prediction Details"
+    },
+    {
+      "fieldname": "predicted_date",
+      "fieldtype": "Date",
+      "label": "Predicted Date"
+    },
+    {
+      "fieldname": "probability",
+      "fieldtype": "Percent",
+      "in_list_view": 1,
+      "label": "Probability"
+    },
+    {
+      "fieldname": "column_break_9",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "confidence_level",
+      "fieldtype": "Percent",
+      "label": "Confidence Level"
+    },
+    {
+      "fieldname": "ml_model_used",
+      "fieldtype": "Link",
+      "label": "ML Model",
+      "options": "APS ML Model"
+    },
+    {
+      "fieldname": "impact_section",
+      "fieldtype": "Section Break",
+      "label": "Impact"
+    },
+    {
+      "fieldname": "predicted_impact",
+      "fieldtype": "Small Text",
+      "label": "Predicted Impact"
+    },
+    {
+      "fieldname": "estimated_cost_impact",
+      "fieldtype": "Currency",
+      "label": "Estimated Cost Impact"
+    },
+    {
+      "fieldname": "affected_jobs",
+      "fieldtype": "Long Text",
+      "label": "Affected Jobs (JSON)"
+    },
+    {
+      "fieldname": "mitigation_section",
+      "fieldtype": "Section Break",
+      "label": "Mitigation"
+    },
+    {
+      "fieldname": "suggested_actions",
+      "fieldtype": "Text Editor",
+      "label": "Suggested Actions"
+    },
+    {
+      "fieldname": "mitigation_cost",
+      "fieldtype": "Currency",
+      "label": "Mitigation Cost"
+    },
+    {
+      "fieldname": "status_section",
+      "fieldtype": "Section Break",
+      "label": "Status"
+    },
+    {
+      "default": "New",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "New\nAcknowledged\nIn Progress\nResolved\nFalse Positive"
+    },
+    {
+      "fieldname": "acknowledged_by",
+      "fieldtype": "Link",
+      "label": "Acknowledged By",
+      "options": "User"
+    },
+    {
+      "fieldname": "column_break_19",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "acknowledged_date",
+      "fieldtype": "Datetime",
+      "label": "Acknowledged Date"
+    },
+    {
+      "fieldname": "resolution_notes",
+      "fieldtype": "Text Editor",
+      "label": "Resolution Notes"
+    },
+    {
+      "fieldname": "actual_outcome",
+      "fieldtype": "Small Text",
+      "label": "Actual Outcome"
+    }
+  ],
+  "links": [],
+  "modified": "2025-11-06 10:00:00",
+  "modified_by": "Administrator",
+  "module": "Dbiz Aps",
+  "name": "APS Risk Alert",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Manufacturing Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Manufacturing User"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

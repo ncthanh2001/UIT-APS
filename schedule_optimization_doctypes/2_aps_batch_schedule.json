@@ -1,0 +1,247 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2025-11-06 10:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "batch_id",
+  "planning_result",
+  "batch_name",
+  "column_break_4",
+  "batch_sequence",
+  "batch_type",
+  "product_family",
+  "similarity_score",
+  "metrics_section",
+  "total_jobs",
+  "total_qty",
+  "column_break_10",
+  "total_operations",
+  "timing_section",
+  "estimated_start_datetime",
+  "estimated_end_datetime",
+  "column_break_14",
+  "estimated_duration_hours",
+  "setup_section",
+  "estimated_setup_time_mins",
+  "actual_setup_time_mins",
+  "column_break_18",
+  "setup_time_saved_mins",
+  "status_section",
+  "status",
+  "completion_percent",
+  "items_section",
+  "items",
+  "setup_requirements_section",
+  "setup_requirements"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "BATCH-.planning_result.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "batch_id",
+   "fieldtype": "Data",
+   "label": "Batch ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "planning_result",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Planning Result",
+   "options": "APS Production Planning Result",
+   "reqd": 1
+  },
+  {
+   "fieldname": "batch_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Batch Name"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "batch_sequence",
+   "fieldtype": "Int",
+   "label": "Batch Sequence"
+  },
+  {
+   "fieldname": "batch_type",
+   "fieldtype": "Select",
+   "label": "Batch Type",
+   "options": "Product Family\nSize-based\nTime-window\nSimilarity-based"
+  },
+  {
+   "fieldname": "product_family",
+   "fieldtype": "Link",
+   "label": "Product Family",
+   "options": "APS Item Group"
+  },
+  {
+   "fieldname": "similarity_score",
+   "fieldtype": "Percent",
+   "label": "Similarity Score"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "metrics_section",
+   "fieldtype": "Section Break",
+   "label": "Metrics"
+  },
+  {
+   "fieldname": "total_jobs",
+   "fieldtype": "Int",
+   "label": "Total Jobs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_operations",
+   "fieldtype": "Int",
+   "label": "Total Operations",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "timing_section",
+   "fieldtype": "Section Break",
+   "label": "Timing"
+  },
+  {
+   "fieldname": "estimated_start_datetime",
+   "fieldtype": "Datetime",
+   "label": "Estimated Start"
+  },
+  {
+   "fieldname": "estimated_end_datetime",
+   "fieldtype": "Datetime",
+   "label": "Estimated End"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_duration_hours",
+   "fieldtype": "Float",
+   "label": "Estimated Duration (Hours)",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "setup_section",
+   "fieldtype": "Section Break",
+   "label": "Setup Time"
+  },
+  {
+   "fieldname": "estimated_setup_time_mins",
+   "fieldtype": "Float",
+   "label": "Estimated Setup Time (Mins)"
+  },
+  {
+   "fieldname": "actual_setup_time_mins",
+   "fieldtype": "Float",
+   "label": "Actual Setup Time (Mins)"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "setup_time_saved_mins",
+   "fieldtype": "Float",
+   "label": "Setup Time Saved (Mins)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Planned",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Planned\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "completion_percent",
+   "fieldtype": "Percent",
+   "label": "Completion %"
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Batch Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "APS Batch Schedule Item"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "setup_requirements_section",
+   "fieldtype": "Section Break",
+   "label": "Setup Requirements"
+  },
+  {
+   "fieldname": "setup_requirements",
+   "fieldtype": "Table",
+   "label": "Setup Requirements",
+   "options": "APS Batch Setup Requirement"
+  }
+ ],
+ "links": [],
+ "modified": "2025-11-06 10:00:00",
+ "modified_by": "Administrator",
+ "module": "Dbiz Aps",
+ "name": "APS Batch Schedule",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Manufacturing Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Manufacturing User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

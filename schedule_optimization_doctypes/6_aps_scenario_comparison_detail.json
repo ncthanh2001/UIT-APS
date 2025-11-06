@@ -1,0 +1,103 @@
+{
+  "creation": "2025-11-06 10:00:00",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "scenario_name",
+    "planning_result",
+    "objective_function",
+    "optimization_score",
+    "makespan_hours",
+    "total_cost",
+    "average_utilization",
+    "on_time_delivery_rate",
+    "total_tardiness_hours",
+    "setup_time_saved_hours",
+    "rank",
+    "is_recommended",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "scenario_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Scenario Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "planning_result",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Planning Result",
+      "options": "APS Production Planning Result"
+    },
+    {
+      "fieldname": "objective_function",
+      "fieldtype": "Data",
+      "label": "Objective Function"
+    },
+    {
+      "fieldname": "optimization_score",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Score"
+    },
+    {
+      "fieldname": "makespan_hours",
+      "fieldtype": "Float",
+      "label": "Makespan (Hours)"
+    },
+    {
+      "fieldname": "total_cost",
+      "fieldtype": "Currency",
+      "label": "Total Cost"
+    },
+    {
+      "fieldname": "average_utilization",
+      "fieldtype": "Percent",
+      "label": "Avg Utilization"
+    },
+    {
+      "fieldname": "on_time_delivery_rate",
+      "fieldtype": "Percent",
+      "label": "On-time Delivery"
+    },
+    {
+      "fieldname": "total_tardiness_hours",
+      "fieldtype": "Float",
+      "label": "Tardiness (Hours)"
+    },
+    {
+      "fieldname": "setup_time_saved_hours",
+      "fieldtype": "Float",
+      "label": "Setup Saved (Hours)"
+    },
+    {
+      "fieldname": "rank",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Rank"
+    },
+    {
+      "fieldname": "is_recommended",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Recommended"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "istable": 1,
+  "modified": "2025-11-06 10:00:00",
+  "modified_by": "Administrator",
+  "module": "Dbiz Aps",
+  "name": "APS Scenario Comparison Detail",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

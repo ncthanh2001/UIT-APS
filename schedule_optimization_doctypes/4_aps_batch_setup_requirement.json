@@ -1,0 +1,54 @@
+{
+  "creation": "2025-11-06 10:00:00",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "setup_item",
+    "setup_type",
+    "estimated_time_mins",
+    "actual_time_mins",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "setup_item",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Setup Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "setup_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Setup Type",
+      "options": "Tool Change\nParameter Adjustment\nMaterial Change\nCleaning"
+    },
+    {
+      "fieldname": "estimated_time_mins",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Estimated Time (Mins)"
+    },
+    {
+      "fieldname": "actual_time_mins",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Actual Time (Mins)"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "istable": 1,
+  "modified": "2025-11-06 10:00:00",
+  "modified_by": "Administrator",
+  "module": "Dbiz Aps",
+  "name": "APS Batch Setup Requirement",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

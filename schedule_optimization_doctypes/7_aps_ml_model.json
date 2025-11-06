@@ -1,0 +1,197 @@
+{
+  "actions": [],
+  "creation": "2025-11-06 10:00:00",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "model_name",
+    "model_type",
+    "model_version",
+    "algorithm_used",
+    "training_section",
+    "training_date",
+    "training_samples",
+    "training_accuracy",
+    "column_break_8",
+    "validation_accuracy",
+    "test_accuracy",
+    "model_file_section",
+    "model_file_path",
+    "model_size_mb",
+    "features_section",
+    "input_features",
+    "feature_importance",
+    "performance_section",
+    "average_prediction_time_ms",
+    "predictions_count",
+    "column_break_18",
+    "average_error",
+    "status_section",
+    "is_active",
+    "is_production",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "model_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Model Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "model_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Model Type",
+      "reqd": 1,
+      "options": "Duration Prediction\nBottleneck Prediction\nRisk Prediction\nSimilarity Calculation"
+    },
+    {
+      "fieldname": "model_version",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Version"
+    },
+    {
+      "fieldname": "algorithm_used",
+      "fieldtype": "Data",
+      "label": "Algorithm"
+    },
+    {
+      "fieldname": "training_section",
+      "fieldtype": "Section Break",
+      "label": "Training Info"
+    },
+    {
+      "fieldname": "training_date",
+      "fieldtype": "Date",
+      "label": "Training Date"
+    },
+    {
+      "fieldname": "training_samples",
+      "fieldtype": "Int",
+      "label": "Training Samples"
+    },
+    {
+      "fieldname": "training_accuracy",
+      "fieldtype": "Percent",
+      "label": "Training Accuracy"
+    },
+    {
+      "fieldname": "column_break_8",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "validation_accuracy",
+      "fieldtype": "Percent",
+      "label": "Validation Accuracy"
+    },
+    {
+      "fieldname": "test_accuracy",
+      "fieldtype": "Percent",
+      "label": "Test Accuracy"
+    },
+    {
+      "collapsible": 1,
+      "fieldname": "model_file_section",
+      "fieldtype": "Section Break",
+      "label": "Model File"
+    },
+    {
+      "fieldname": "model_file_path",
+      "fieldtype": "Data",
+      "label": "Model File Path"
+    },
+    {
+      "fieldname": "model_size_mb",
+      "fieldtype": "Float",
+      "label": "Model Size (MB)"
+    },
+    {
+      "collapsible": 1,
+      "fieldname": "features_section",
+      "fieldtype": "Section Break",
+      "label": "Features"
+    },
+    {
+      "fieldname": "input_features",
+      "fieldtype": "Long Text",
+      "label": "Input Features (JSON)"
+    },
+    {
+      "fieldname": "feature_importance",
+      "fieldtype": "Long Text",
+      "label": "Feature Importance (JSON)"
+    },
+    {
+      "collapsible": 1,
+      "fieldname": "performance_section",
+      "fieldtype": "Section Break",
+      "label": "Performance"
+    },
+    {
+      "fieldname": "average_prediction_time_ms",
+      "fieldtype": "Float",
+      "label": "Avg Prediction Time (ms)"
+    },
+    {
+      "fieldname": "predictions_count",
+      "fieldtype": "Int",
+      "label": "Predictions Count"
+    },
+    {
+      "fieldname": "column_break_18",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "average_error",
+      "fieldtype": "Float",
+      "label": "Average Error"
+    },
+    {
+      "fieldname": "status_section",
+      "fieldtype": "Section Break",
+      "label": "Status"
+    },
+    {
+      "default": "1",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_production",
+      "fieldtype": "Check",
+      "label": "Is Production"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2025-11-06 10:00:00",
+  "modified_by": "Administrator",
+  "module": "Dbiz Aps",
+  "name": "APS ML Model",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Manufacturing Manager"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}
