@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "schedule_optimization_doctypes",
+			"path": "../../../Downloads/schedule_optimization_doctypes/schedule_optimization_doctypes"
+		},
+		{
+			"name": "UIT",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "UIT"
+	}
+}
